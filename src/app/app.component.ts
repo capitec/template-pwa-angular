@@ -14,7 +14,11 @@ export class AppComponent {
     darkMediaQuery = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : undefined;
     darkMode: boolean = this.darkMediaQuery?.matches ?? false;
 
-    constructor(private _router: Router) {}
+    constructor(private _router: Router) {
+        if (this.darkMode) {
+            document.documentElement.setAttribute('dark', '');
+        }
+    }
 
     navigate(e: MouseEvent, path: string) {
         e.preventDefault();

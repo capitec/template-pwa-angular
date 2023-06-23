@@ -1,18 +1,17 @@
-<header (click)="navigate($event, '/')">
-    <img src="./assets/logo.png" alt="Omni Logo" />
-    <omni-label>Omni + Angular</omni-label>
-</header>
-<div class="navbar">
-    <nav>
-        <omni-hyperlink href="/" (click)="navigate($event, '/')">Home</omni-hyperlink>
-        <omni-hyperlink href="/components" (click)="navigate($event, '/components')"
-            label="Components"></omni-hyperlink>
-        <omni-hyperlink href="/form" (click)="navigate($event, '/form')" label="Form"></omni-hyperlink>
-    </nav>
-    <omni-switch checked="darkMode" (value-change)="toggleDarkMode()"><span>Dark Mode</span></omni-switch>
-</div>
-<!-- <div routerLink="/components">Components</div>
-<div routerLink="/home">Home</div>
-<div routerLink="/form">Form</div> -->
 
-<router-outlet></router-outlet>
+    <header (click)="navigate($event, '/')">
+        <img src="./assets/logo.png" alt="Omni Logo" />
+        <omni-label>Omni + Angular</omni-label>
+    </header>
+    <div class="navbar">
+        <nav>
+            <omni-hyperlink href="/" (click)="navigate($event, '/')">Home</omni-hyperlink>
+            <omni-hyperlink href="/components" (click)="navigate($event, '/components')"
+                label="Components"></omni-hyperlink>
+            <omni-hyperlink href="/form" (click)="navigate($event, '/form')" label="Form"></omni-hyperlink>
+        </nav>
+        <omni-switch checked="darkMode" (value-change)="toggleDarkMode()"><span>Dark Mode</span></omni-switch>
+    </div>
+    <div class="content-area">
+        <router-outlet></router-outlet>
+    </div>

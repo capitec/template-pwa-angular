@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import '@capitec/omni-components/icon';
 
 @Component({
   selector: 'app-view-home',

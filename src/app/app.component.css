@@ -137,3 +137,15 @@ nav > omni-hyperlink:hover {
         display: none;
     }
 }
+
+/* ROUTER CONTENT */
+
+.content-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    background-color: var(--global-background-color);
+    height: 100%;
+    padding: 20px;
+}

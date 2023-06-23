@@ -5,6 +5,7 @@ import { ViewHome } from './modules/module-a/view-home';
 import { ViewForm } from './modules/module-b/view-form';
 
 const routes: Routes = [
+    { path: '', component: ViewHome },
     { path: 'home', component: ViewHome },
     { path: 'components', component: ViewComponents },
     { path: 'form', component: ViewForm }

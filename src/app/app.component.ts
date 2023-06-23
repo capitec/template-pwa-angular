@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
-import { Button } from '@capitec/omni-components/button';
-import { Select } from '@capitec/omni-components/select';
-import '@capitec/omni-components/button';
-import '@capitec/omni-components/select';
+import '@capitec/omni-components/hyperlink';
+import '@capitec/omni-components/switch';
+import '@capitec/omni-components/label';
 
 @Component({
     selector: 'app-root',
@@ -11,38 +11,22 @@ import '@capitec/omni-components/select';
     styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    title = 'my-app';
+    darkMediaQuery = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : undefined;
+    darkMode: boolean = this.darkMediaQuery?.matches ?? false;
 
-    buttonType = 'primary';
-    buttonLabel = 'Click Me';
+    constructor(private _router: Router) {}
 
-    selectValue = { id: '2', label: 'James Howlett' };
-
-    selectItems = [
-        { id: '1', label: 'Peter Parker' },
-        { id: '2', label: 'James Howlett' },
-        { id: '3', label: 'Tony Stark' },
-        { id: '4', label: 'Steve Rodgers' },
-        { id: '5', label: 'Bruce Banner' },
-        { id: '6', label: 'Wanda Maximoff' },
-        { id: '7', label: 'TChalla' },
-        { id: '8', label: 'Henry P. McCoy' },
-        { id: '9', label: 'Carl Lucas' },
-        { id: '10', label: 'Frank Castle' }
-    ];
-
-    onChange(event?: Event) {
-        console.log((event?.target as Select).value);
+    navigate(e: MouseEvent, path: string) {
+        e.preventDefault();
+        this._router.navigateByUrl(path);
     }
 
-    onClick(event?: Event) {
-        console.log((event?.target as Button).type);
-    }
-
-    renderItem(item: any) {
-        const s = document.createElement('span');
-        s.innerText = `${item.label} - (${item.id})`;
-        s.style.color = 'orange';
-        return s;
+    toggleDarkMode() {
+        this.darkMode = !this.darkMode;
+        if (this.darkMode) {
+            document.documentElement.setAttribute('dark', '');
+        } else {
+            document.documentElement.removeAttribute('dark');
+        }
     }
 }

@@ -1,9 +1,18 @@
-<!-- <omni-button [label]="buttonLabel" [type]="buttonType" (click)="onClick($event)" [disabled]="false"></omni-button>
-<omni-button label="Click Me 2" type="secondary" (click)="onClick($event)"></omni-button>
-<omni-select label="Select Something" [items]="selectItems" display-field="label" [id-field]="'id'"
-    (change)="onChange($event)" [value]="selectItems[1]" [renderSelection]="renderItem"></omni-select> -->
-<div routerLink="/components">Components</div>
+<header (click)="navigate($event, '/')">
+    <img src="./assets/logo.png" alt="Omni Logo" />
+    <omni-label>Omni + Angular</omni-label>
+</header>
+<div class="navbar">
+    <nav>
+        <omni-hyperlink href="/" (click)="navigate($event, '/')">Home</omni-hyperlink>
+        <omni-hyperlink href="/components" (click)="navigate($event, '/components')"
+            label="Components"></omni-hyperlink>
+        <omni-hyperlink href="/form" (click)="navigate($event, '/form')" label="Form"></omni-hyperlink>
+    </nav>
+    <omni-switch checked="darkMode" (value-change)="toggleDarkMode()"><span>Dark Mode</span></omni-switch>
+</div>
+<!-- <div routerLink="/components">Components</div>
 <div routerLink="/home">Home</div>
-<div routerLink="/form">Form</div>
+<div routerLink="/form">Form</div> -->
 
 <router-outlet></router-outlet>

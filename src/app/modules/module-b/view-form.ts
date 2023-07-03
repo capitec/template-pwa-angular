@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, Component } from '@angular/core';
 import { EmailField } from '@capitec/omni-components/email-field';
 import { PinField } from '@capitec/omni-components/pin-field';
 import { Check } from '@capitec/omni-components/check';
@@ -15,7 +15,9 @@ import '@capitec/omni-components/radio';
 @Component({
     selector: 'app-view-form',
     templateUrl: './view-form.html',
-    styleUrls: ['./view-form.css']
+    styleUrls: ['./view-form.css'],
+    standalone: true,
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class ViewForm {
     emailValue = '';

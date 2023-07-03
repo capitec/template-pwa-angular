@@ -1,14 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ViewComponents } from './modules/module-a/view-components';
-import { ViewHome } from './modules/module-a/view-home';
-import { ViewForm } from './modules/module-b/view-form';
 
 const routes: Routes = [
-    { path: '', component: ViewHome },
-    { path: 'home', component: ViewHome },
-    { path: 'components', component: ViewComponents },
-    { path: 'form', component: ViewForm }
+    {
+        path: '',
+        loadComponent: () => import(/* webpackChunkName: "module_a" */ './modules/module-a/view-home').then((m) => m.ViewHome)
+    },
+    {
+        path: 'components',
+        loadComponent: () => import(/* webpackChunkName: "module_a" */ './modules/module-a/view-components').then((m) => m.ViewComponents)
+    },
+    {
+        path: 'form',
+        loadComponent: () => import(/* webpackChunkName: "module_b" */ './modules/module-b/view-form').then((m) => m.ViewForm)
+    }
 ];
 
 @NgModule({

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, Component } from '@angular/core';
 import { ColorField } from '@capitec/omni-components/color-field';
 import { Select } from '@capitec/omni-components/select';
 
@@ -11,7 +11,9 @@ import '@capitec/omni-components/select';
 @Component({
     selector: 'app-view-components',
     templateUrl: './view-components.html',
-    styleUrls: ['./view-components.css']
+    styleUrls: ['./view-components.css'],
+    standalone: true,
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class ViewComponents {
     color: string = '#209dee';

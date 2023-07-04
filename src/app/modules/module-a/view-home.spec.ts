@@ -1,21 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ViewHome } from './view-home';
 
 describe('ViewHome', () => {
-  let component: ViewHome;
-  let fixture: ComponentFixture<ViewHome>;
+    let component: ViewHome;
+    let fixture: ComponentFixture<ViewHome>;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [ViewHome]
+    beforeEach(() => {
+        fixture = TestBed.createComponent(ViewHome);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
     });
-    fixture = TestBed.createComponent(ViewHome);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+    it('should create', () => {
+        expect(component).toBeTruthy();
+    });
 });

@@ -1,21 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ViewForm } from './view-form';
 
 describe('ViewForm', () => {
-  let component: ViewForm;
-  let fixture: ComponentFixture<ViewForm>;
+    let component: ViewForm;
+    let fixture: ComponentFixture<ViewForm>;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [ViewForm]
+    beforeEach(() => {
+        fixture = TestBed.createComponent(ViewForm);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
     });
-    fixture = TestBed.createComponent(ViewForm);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+    it('should create', () => {
+        expect(component).toBeTruthy();
+    });
 });

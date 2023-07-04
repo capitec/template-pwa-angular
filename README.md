@@ -1,4 +1,3 @@
 - Page title
 - Scripts
  - Preview
- - README

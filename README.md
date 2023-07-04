@@ -1,6 +1,6 @@
 # Introduction
 
-Progressive Web App (PWA) starter template for [Angular](https://angular.io/)-based Single-page application (SPA) development, leveraging various [Omni](https://github.com/capitec?q=omni-) libraries.
+Progressive Web App (PWA) starter template for [Angular](https://angular.io/)-based Single-page application (SPA) development, leveraging [Omni Components](https://github.com/capitec/omni-components) library.
 
 # Usage
 
@@ -23,6 +23,21 @@ npm i
 code .
 ```
 
+# Features
+|     Feature    |  Availability | Description |
+|-------------------------------|-----|-----------------------------------------------------------------|
+|    Components                 | ✅  | [Omni Components](https://github.com/capitec/omni-components)   |
+|    Routing                    | ✅  | [Angular](https://angular.io/guide/routing-overview)    |
+|    Component Intellisense     | ✅  |                                          |
+|    VS Code Debugging          | ✅  | [`.vscode/launch.json`](./.vscode/launch.json)                                       |
+|    Tests                      | ✅  | [Angular](https://angular.io/guide/testing)                     |
+|    Serve                      | ✅  | [Angular CLI](https://angular.io/cli)                           |
+|    Build                      | ✅  | [Angular CLI](https://angular.io/cli)                           |
+|    Build chunking             | ✅  | `/* webpackChunkName: */` compiler hints                        |
+|    Preview built output       | ✅  | [http-server](https://github.com/http-party/http-server)        |
+|    Formatting                 | ✅  | [Prettier](https://prettier.io/)                                |
+|    Linting                    | ✅  | [ESLint](https://eslint.org/)                                   |
+
 # Scripts
 The following NPM scripts within `package.json` should be noted:
 
@@ -32,18 +47,3 @@ The following NPM scripts within `package.json` should be noted:
 - `test` - Launches the [Angular](https://angular.io/guide/testing) test runner & executes all tests.
 - `format` - Runs the Prettier formatter on all `.ts` files, applying format updates where necessary.
 - `lint`- Runs the ESLint analyzer on all `.ts` files, applying code updates where necessary.
-
-# Showcased Features
-|     Feature    |  Availability | Description |
-|-------------------------------|-----|-----------------------------------------------------------------|
-|    Components                 | ✅  | [Omni Components](https://github.com/capitec/omni-components)   |
-|    Routing                    | ✅  | [Angular Routing](https://angular.io/guide/routing-overview)    |
-|    Component Intellisense     | ✅  | For all Omni Components                                         |
-|    VS Code Debugging          | ✅  | [`.vscode/launch.json`]()                                       |
-|    Tests                      | ✅  | [Angular](https://angular.io/guide/testing)                     |
-|    Serve                      | ✅  | [Angular CLI](https://angular.io/cli)                           |
-|    Build                      | ✅  | [Angular CLI](https://angular.io/cli)                           |
-|    Build chunking             | ✅  | `/* webpackChunkName: */` compiler hints                        |
-|    Preview built output       | ✅  | [http-server](https://github.com/http-party/http-server)        |
-|    Formatting                 | ✅  | [Prettier](https://prettier.io/)                                |
-|    Linting                    | ✅  | [ESLint](https://eslint.org/)                                   |

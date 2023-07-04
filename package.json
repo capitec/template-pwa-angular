@@ -4,7 +4,6 @@
     "version": "0.0.0",
     "private": true,
     "scripts": {
-        "ng": "ng",
         "serve": "ng serve --port 4201",
         "build": "ng build",
         "preview": "npx http-server dist  -p 8084 -o --proxy http://0.0.0.0:8084",
